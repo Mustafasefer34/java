@@ -1,14 +1,31 @@
-package oop1;
+package classesWithAttributes;
 
-//PascalCase
 public class Product {
+	public Product(int id, String name, String description, double price, int stockAmount, String renk) {
+		System.out.println("Yapıcı blok çalıştı");
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.stockAmount = stockAmount;
+		this.renk = renk;
+	}
 
+	private int id;
 	private String name;
-	// camelCase
-	private double unitPrice;
-	private double discount;
-	private String imageUrl;
-	private int unitsInStock;
+	private String description;
+	private double price;
+	private int stockAmount;
+	private String renk;
+	private String kod;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
@@ -18,36 +35,40 @@ public class Product {
 		this.name = name;
 	}
 
-	public double getUnitPrice() {
-		return unitPrice;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setUnitPrice(double unitPrice) {
-		this.unitPrice = unitPrice;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public double getDiscount() {
-		return discount;
+	public double getPrice() {
+		return price;
 	}
 
-	public void setDiscount(double discount) {
-		this.discount = discount;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
-	public String getImageUrl() {
-		return imageUrl;
+	public int getStockAmount() {
+		return stockAmount;
 	}
 
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setStockAmount(int stockAmount) {
+		this.stockAmount = stockAmount;
 	}
 
-	public int getUnitsInStock() {
-		return unitsInStock;
+	public String getRenk() {
+		return renk;
 	}
 
-	public void setUnitsInStock(int unitsInStock) {
-		this.unitsInStock = unitsInStock;
+	public void setRenk(String renk) {
+		this.renk = renk;
+	}
+
+	public String getKod() {
+		return this.name.substring(0, 1) + id;
 	}
 
 }
